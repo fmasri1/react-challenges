@@ -18,6 +18,13 @@ const toLocaleString = (num) =>
 
 const removeSpaces = (num) => num.toString().replace(/\s/g, "");
 
+const math = (a, b, sign) =>
+sign === '+' ? a + b :
+sign === '-' ? a - b :
+sign === 'x' ? a * b :
+a / b;
+
+
 const App = () => {
   let [calc, setCalc] = useState({
     sign: '',
@@ -65,7 +72,7 @@ const App = () => {
     setCalc({
       ...calc,
       sign: value,
-      res: !calc.res && calc.num ? calc.num : calc.res,
+      res: calc.num && calc.res ? toLocaleString(math(Number(removeSpaces(calc.res)), Number(removeSpaces(calc.num)), calc.sign)) : calc.res = calc.num,
       num: 0,
     });
   };
@@ -74,13 +81,6 @@ const App = () => {
     console.log('equals click handler');
 
     if (calc.num && calc.sign) {
-
-      const math = (a, b, sign) =>
-        sign === '+' ? a + b :
-        sign === '-' ? a -b :
-        sign === 'x' ? a * b :
-        a / b;
-
       setCalc({
         ...calc,
         res:
