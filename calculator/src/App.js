@@ -24,7 +24,6 @@ sign === '-' ? a - b :
 sign === 'x' ? a * b :
 a / b;
 
-
 const App = () => {
   let [calc, setCalc] = useState({
     sign: '',

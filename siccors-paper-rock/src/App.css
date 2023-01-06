@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.score-board {
+  background-color: hsl(229, 25%, 31%);
+  width: 60%;
+  height: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 2px solid whitesmoke;
+}
+
+.score{
+  background-color: whitesmoke;
+  color: hsl(229, 25%, 31%);
+  width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.score > span{
+  font-size: small;
+}
+
+.body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(229, 25%, 31%);
+  /* background-color: #8b8375; */
+  /* background-image: linear-gradient(315deg, #fbb034 0%, #4f6fd9 74%); */
+}
+
+.wrapper {
+  width: 60%;
+  height: 540px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: hsl(229, 25%, 31%);
+  /* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hand {
+  background-color: whitesmoke;
+  padding: 10px 10px;
+  border-radius: 20% 20%;
+  border: 10px solid rgb(194, 41, 41);
+}
+
+.button{
+  background-color: whitesmoke;
+
+}
